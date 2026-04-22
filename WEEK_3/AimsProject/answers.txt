@@ -1,0 +1,45 @@
+-----------------------------------------
+LAB 03 – Object-Oriented Techniques
+-----------------------------------------
+
+1. Kết thừa và đa hình trong Media:
+- Lớp Media là lớp abstract, chứa các thuộc tính chung như title, category, cost.
+- Các lớp DigitalVideoDisc, Book, CompactDisc kế thừa từ Media.
+- Phương thức `toString()` và `equals()` được override trong mỗi lớp con để thể hiện đa hình (polymorphism).
+
+2. Lợi ích của sử dụng interface:
+- Interface `Playable` được dùng để thể hiện khả năng "play" cho các lớp như CompactDisc, DigitalVideoDisc, Track.
+- Giúp tách biệt hành vi với cấu trúc dữ liệu, tăng tính linh hoạt khi mở rộng.
+
+3. So sánh Comparable và Comparator:
+- `Comparable` được override trong lớp Media để sắp xếp theo title.
+- `Comparator` được dùng để tùy chỉnh cách sắp xếp, ví dụ: theo cost, theo title + cost.
+
+4. Cart và Store sử dụng ArrayList:
+- Thay vì mảng cố định, ArrayList được sử dụng để dễ thao tác thêm, xóa, sắp xếp các Media.
+- Cart chứa danh sách các media mà khách hàng đặt mua.
+- Store là nơi chứa tất cả media đang bán ra.
+
+5. Tìm kiếm và lọc:
+- Cart hỗ trợ tìm kiếm theo title, ID, category, giá (cost).
+- Có thể dùng `String.contains()` hoặc `String.equalsIgnoreCase()` để tìm kiếm không phân biệt hoa thường.
+
+6. Lý do override equals() và toString():
+- `equals()` giúp so sánh media theo tiêu chí phù hợp (vd: cùng title).
+- `toString()` in ra thông tin có định dạng rõ ràng, giúp in giỏ hàng dễ hơn.
+
+7. Debug testPassingParameter:
+- Việc truyền object trong Java là truyền tham chiếu theo kiểu pass-by-value.
+- Hàm `swap(o1, o2)` không hoạt động vì chỉ hoán đổi tham chiếu cục bộ trong phương thức.
+
+8. Phân biệt is-a và has-a:
+- `DigitalVideoDisc is-a Media`
+- `Cart has-a List<Media>`
+
+9. Lợi ích của việc sử dụng tính trừu tượng (abstraction):
+- Giảm sự phụ thuộc giữa các lớp cụ thể.
+- Tăng khả năng tái sử dụng và mở rộng hệ thống.
+
+10. Tính năng console:
+- Xây dựng menu để điều hướng người dùng thông qua store/cart
+- Áp dụng tất cả các kỹ thuật OOP trong thực tế như: kế thừa, interface, danh sách động, polymorphism...
