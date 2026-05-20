@@ -1,0 +1,39 @@
+-----------------------------------------------
+Reading Assignment – Polymorphism in Java
+-----------------------------------------------
+
+❓ **Câu hỏi 1:**
+What is polymorphism? Why is it useful in Object-Oriented Programming?
+
+✅ **Trả lời:**
+Polymorphism is one of the four fundamental principles of Object-Oriented Programming (OOP), which allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to control access to different types of objects.
+
+Polymorphism is useful because:
+- It allows writing flexible and reusable code.
+- It supports method overriding and dynamic method dispatch.
+- It helps decouple code and improves maintainability.
+
+---
+
+❓ **Câu hỏi 2:**
+How does polymorphism work in Java? Give a real example from your lab implementation.
+
+✅ **Trả lời:**
+In Java, polymorphism works mainly through:
+- Method overriding
+- Interface implementation
+- Dynamic binding (runtime method selection)
+
+**Ví dụ trong lab:**
+In Lab 03, we have an abstract class `Media` and several subclasses such as `DigitalVideoDisc`, `Book`, and `CompactDisc`.  
+When we store different types of media in the same `ArrayList<Media>`, and call `toString()` or `equals()` on them, Java uses **dynamic dispatch** to invoke the correct version based on the actual object's type.
+
+```java
+List<Media> cart = new ArrayList<>();
+cart.add(new DigitalVideoDisc(...));
+cart.add(new Book(...));
+cart.add(new CompactDisc(...));
+
+for (Media m : cart) {
+    System.out.println(m.toString()); // gọi đúng toString() tương ứng
+}
