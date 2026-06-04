@@ -1,0 +1,50 @@
+======================================
+OOP Lab 05 – JavaFX & Exception Handling
+Branch: release/lab05
+======================================
+
+1. Bạn đã thực hiện chức năng gì trong bài Lab này?
+------------------------------------------------------
+- Hiển thị danh sách media (DVD, CD, Book) bằng JavaFX GridPane.
+- Giao diện thêm media sử dụng FXML.
+- Tạo chức năng thêm vào cart.
+- Tạo màn hình giỏ hàng (Cart.fxml) với TableView.
+- Xử lý ngoại lệ khi play media với độ dài không hợp lệ.
+- Triển khai class ngoại lệ riêng: PlayerException.
+- Viết sơ đồ kế thừa Exception tree bằng Astah.
+
+2. Khó khăn bạn gặp trong quá trình làm bài?
+------------------------------------------------------
+- Cấu hình JavaFX SDK và VM arguments trong Eclipse/VSCode.
+- Truyền dữ liệu giữa các scene (store ↔ cart).
+- Giao tiếp giữa controller và FXML (nhầm tên fx:id hoặc onAction).
+- Hiển thị thông báo lỗi bằng `Alert` trong GUI.
+
+3. Exception handling trong JavaFX được bạn thực hiện như thế nào?
+------------------------------------------------------
+- Dùng try-catch để bắt lỗi khi người dùng nhập sai dữ liệu (ví dụ độ dài âm).
+- Dùng `throw new PlayerException(...)` để tạo ngoại lệ tùy chỉnh trong `play()`.
+- Sử dụng `Alert` để hiển thị thông báo lỗi rõ ràng với người dùng.
+
+4. Mục đích của việc dùng FXML và SceneBuilder là gì?
+------------------------------------------------------
+- Giúp tách phần giao diện khỏi logic, dễ bảo trì và thiết kế lại.
+- SceneBuilder giúp thiết kế giao diện nhanh chóng mà không cần viết tay layout.
+- Dễ dàng thay đổi bố cục UI mà không ảnh hưởng đến code xử lý logic.
+
+5. Bạn học được gì từ bài Lab này?
+------------------------------------------------------
+- Kỹ năng sử dụng JavaFX để xây dựng GUI chuyên nghiệp.
+- Cách tách logic xử lý vào các controller riêng biệt.
+- Cách tạo, ném và xử lý ngoại lệ trong chương trình.
+- Cách tổ chức và giao tiếp giữa các lớp theo hướng đối tượng.
+
+6. Các công cụ bạn đã sử dụng:
+------------------------------------------------------
+- Java 17
+- JavaFX SDK 17
+- SceneBuilder 22.0
+- Eclipse IDE / VS Code
+- Astah Community (vẽ sơ đồ)
+
+======================================
